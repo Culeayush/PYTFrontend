@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Login!</h1>
+                </div>
+                <form >
+                    <form>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Username</label>
+                          <span style="padding: 4px;"></span>
+                          <input type="email" class="form-control" id="usermail" aria-describedby="emailHelp">
+                          
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Password</label>
+                          <span style="padding: 5px;"></span>
+                          <input type="password" class="form-control" id="password">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" id="submitButton" (click)="onClicked()">Login</button>
+                      </form>
+                      <a style ="color:white" routerLink="/signup">Not a registered user? Click to Sign up!!</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
