@@ -4,7 +4,7 @@
             <div class="card">
                 <div class="text-center">
                     <h1>Sign Up!</h1>
-                    <h6>Register yourself here!!</h6>
+                    <h4>Register yourself here!!</h4>
                 </div>
                 <form >
                     <form>
@@ -14,17 +14,17 @@
                             <input type="email" class="form-control" id="usermail" aria-describedby="emailHelp">
                            </div>
                         <div class="mb-3">
-                          <label for="exampleInputEmail1" class="form-label">Admin?Type</label>
+                          <label for="exampleInputEmail1" class="form-label">Password</label>
                           <span style="padding: 5px;"></span>
-                          <input type="text" class="form-control" id="usermail" aria-describedby="emailHelp">
+                          <input type="password" class="form-control" id="password" aria-describedby="emailHelp">
                          </div>
                         <div class="mb-3">
-                          <label for="exampleInputPassword1" class="form-label">Password</label>
+                          <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
                           <span style="padding: 5px;"></span>
-                          <input type="password" class="form-control" id="password">
+                          <input type="password" class="form-control" id="confirmPassword" >
                         </div>
                         
-                        <button type="submit" class="btn btn-primary" id="submitButton">Sign Up</button>
+                        <button type="submit" class="btn btn-primary" id="submitButton" (click)="signUp()">Sign Up</button>
                       </form>
                       <a style ="color:white" routerLink="/login">Already registered? Click to Log in!!</a>
                 </form>

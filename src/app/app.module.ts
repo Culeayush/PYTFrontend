@@ -22,6 +22,7 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
 import { UserRegistrationService } from './user-registration.service';
+import { PackagesComponent } from './packages/packages.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { UserRegistrationService } from './user-registration.service';
     FlightsComponent,
     HotelsComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    PackagesComponent
   ],
   imports: [
     BrowserModule,
