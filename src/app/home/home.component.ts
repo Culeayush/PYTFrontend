@@ -5,55 +5,55 @@ import { Observable } from 'rxjs';
 import { AppService } from '../app.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+	selector: 'app-home',
+	templateUrl: './home.component.html',
+	styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  /** Based on the screen size, switch from standard to one column per row */
-  cards=[];
-  cardsForhandset = [];
-  cardsForWeb = [];
+	/** Based on the screen size, switch from standard to one column per row */
+	cards = [];
+	cardsForhandset = [];
+	cardsForWeb = [];
 
-  isHandset: boolean = false;
-  isHandsetObserver: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
-    map(({ matches }) => {
-      if (matches) {
-        return true;
-      }
+	isHandset: boolean = false;
+	isHandsetObserver: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
+		map(({ matches }) => {
+			if (matches) {
+				return true;
+			}
 
-      return false;
-    })
-  );
+			return false;
+		})
+	);
 
-  constructor(private breakpointObserver: BreakpointObserver,
-    public appService:AppService) {}
+	constructor(private breakpointObserver: BreakpointObserver,
+		public appService: AppService) { }
 
-  ngOnInit(){
-    this.isHandsetObserver.subscribe(currentObserverValue =>{
-      this.isHandset = currentObserverValue;
-      this.loadCards();
-    })
-    
-    this.appService.getDeals().subscribe(
-      response => {
-        this.cardsForhandset = response.handsetCards;
-        this.cardsForWeb = response.webCards;
-        this.loadCards();
-        
-      },
-      error => {
-         alert('There was an error in receiving data from server. Please come again later!');
-        
-      }
-    );
-  }
+	ngOnInit() {
+		this.isHandsetObserver.subscribe(currentObserverValue => {
+			this.isHandset = currentObserverValue;
+			this.loadCards();
+		})
 
-  loadCards(){
-    this.cards = this.isHandset? this.cardsForhandset:this.cardsForWeb;
-  }
+		this.appService.getDeals().subscribe(
+			response => {
+				this.cardsForhandset = response.handsetCards;
+				this.cardsForWeb = response.webCards;
+				this.loadCards();
 
-  getImage(imageName: string): string {
-    return 'url(' + 'http://localhost:3000/images/' + imageName + '.jpg' + ')';
-  }
+			},
+			error => {
+				alert('There was an error in receiving data from server. Please come again later!');
+
+			}
+		);
+	}
+
+	loadCards() {
+		this.cards = this.isHandset ? this.cardsForhandset : this.cardsForWeb;
+	}
+
+	getImage(imageName: string): string {
+		return 'url(' + 'http://localhost:3000/images/' + imageName + '.jpg' + ')';
+	}
 }

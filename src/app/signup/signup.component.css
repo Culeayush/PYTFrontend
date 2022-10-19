@@ -10,7 +10,7 @@
     background: linear-gradient(90deg,   rgb(109, 159, 194)0%, hsla(260, 29%, 36%, 1))100%;
     }
     
-    .card h1,h6{
+    .card h1,h4{
         color: #ffff;
     }
     label{

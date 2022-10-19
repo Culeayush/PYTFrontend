@@ -18,3 +18,7 @@
 mat-nav-list a.active{
   color: blue;
 }
+
+#logoutBtn,#userMsg{
+	display: none;
+}
