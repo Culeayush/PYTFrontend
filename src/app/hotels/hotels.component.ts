@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HotelsComponent implements OnInit {
 
-  title = 'Hotel Bookings';
-  myImage:string = 'assets/hot.jpg';
-  constructor() { }
+
+  constructor(private http:HttpClient) { }
 
   ngOnInit(): void {
   }

@@ -23,6 +23,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
 import { UserRegistrationService } from './user-registration.service';
 import { PackagesComponent } from './packages/packages.component';
+import {MatInputModule} from '@angular/material/input';
+import { MatFormField } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,8 @@ import { PackagesComponent } from './packages/packages.component';
     MatCardModule,
     MatMenuModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatInputModule
   ],
   providers: [UserRegistrationService],
   bootstrap: [AppComponent]

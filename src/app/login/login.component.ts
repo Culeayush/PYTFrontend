@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit {
 					console.log(password.value)
 					console.log(this.user.userPassword)
 					if(password.value === this.user.userPassword){
-						//alert('LOGGED IN') replca with snackbar
+						alert('LOGGED IN') 
 						const sp = document.querySelector('#userMsg') as HTMLSpanElement
 						sp.textContent = 'Hi, '+this.user.userName
 						setLoginStatus(true)

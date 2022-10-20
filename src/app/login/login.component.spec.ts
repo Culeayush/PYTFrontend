@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { loginValidator } from 'loginStatus/LS';
+///simport { loginValidator } from 'loginStatus/LS';
 
 import { LoginComponent } from './login.component';
 
