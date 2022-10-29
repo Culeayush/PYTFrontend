@@ -1,14 +1,24 @@
+<div class="cardContainer">
+	<h3 class="hotelHeader">Flight Bookings</h3>
+	<div class="selectContainer">
+		<div class="label-item">
+			<label>Flight Date</label>
+			<input class="date-control" type="date" id="bookingDate" name="bookingDate" (change)="updateDate()">
+		</div>
+		<div class="label-item">
+			<label>Source</label>
+			<select class="form-control" id='firstList' name='firstList' (change)="itemChanged()">
+		</select>
+		</div>
+		<div class="label-item">
+			<label>Destination</label>
+			<select class="form-control" id='secondList' name='secondList' (change)="finalizeBooking()">
+		</select>
+		</div>
+	</div>
+	<div class="confirmation">
+		<h3 id="total" class="total">Total Cost : </h3>
+		<button class="booKing" (click)="booking()">Confirm Booking</button>
+	</div>
 
-<mat-card class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Flight Bookings</mat-card-title>
-    </mat-card-header>
-    <img mat-card-image src="/assets/flights1.jpeg" alt="">
-    <mat-card-content>
-     
-    </mat-card-content>
-    <mat-card-actions>
-      
-    </mat-card-actions>
-  </mat-card>
+</div>

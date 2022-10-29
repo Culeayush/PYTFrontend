@@ -1,13 +1,98 @@
-.img {
-    display: block;
-    width: fit-content;
-    height: 100vh;
+.cardContainer {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
     background-image: url("../../assets/hotels1.jpg");
     background-size: cover;
 }
-/* 
-div {
-    display:contents;
-    width:max-content;
-    background-color:transparent;
-} */
+
+.cardContainer::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.75);
+}
+
+.hotelHeader {
+	font-size: 20px;
+	padding-top: 22px;
+	padding-left: 26px;
+	color: white;
+	z-index: 1;
+}
+
+.selectContainer{
+	display: flex;
+	flex-wrap: wrap;
+	min-height : 200px;
+	justify-content: center;
+	align-items: center;
+	padding: 32px;
+}
+
+.confirmation {
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+}
+
+.form-control {
+	height: 60px;
+	width: 270px;
+	position: relative;
+	padding: 12px;
+	border-width: 2px;
+	border-radius: 4px;
+	font-size: medium;
+}
+
+.form-control-input {
+	height: 36px;
+	width: 252px;
+	position: relative;
+	padding: 10px;
+	border-width: 2px;
+	border-radius: 4px;
+	font-size: medium;
+}
+
+.date-control {
+	height: 56px;
+	width: 238px;
+	padding-inline: 16px;
+	position: relative;
+	border-width: 2px;
+	border-radius: 4px;
+	font-size: medium;
+}
+
+.label-item {
+	display: flex;
+	flex-direction: column;
+	margin-inline: 18px;
+}
+
+.booKing {
+	height: 56px;
+	width: 238px;
+}
+
+.total {
+	font-size: 20px;
+	color: white;
+}
+
+label {
+	font-size: medium;
+	margin-left: 14;
+	color: white;
+	z-index: 1;
+}
