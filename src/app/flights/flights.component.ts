@@ -84,6 +84,7 @@ export class FlightsComponent implements OnInit {
 	}
 
 	booking(){
-		alert("BOOKING CONFIRMED")
+		this.router.navigate(['paymentpage'])
+		//alert("BOOKING CONFIRMED")
 	}
 }

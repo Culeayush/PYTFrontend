@@ -26,6 +26,7 @@ import { PackagesComponent } from './packages/packages.component';
 import {MatInputModule} from '@angular/material/input';
 import { MatFormField } from '@angular/material/form-field';
 import { PaymentpageComponent } from './paymentpage/paymentpage.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { PaymentpageComponent } from './paymentpage/paymentpage.component';
     LoginComponent,
     SignupComponent,
     PackagesComponent,
-    PaymentpageComponent
+    PaymentpageComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

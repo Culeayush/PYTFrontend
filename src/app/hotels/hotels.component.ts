@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Hotel } from './Hotel';
+import { Hotel } from './hotel';
+
 
 @Component({
 	selector: 'app-hotels',
@@ -76,6 +77,7 @@ export class HotelsComponent implements OnInit {
 	}
 
 	booking() {
-		alert("BOOKING CONFIRMED")
+		this.router.navigate(['paymentpage'])
+		//alert("BOOKING CONFIRMED")
 	}
 }
