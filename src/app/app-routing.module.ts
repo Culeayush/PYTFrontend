@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { HotelsComponent } from './hotels/hotels.component';
 import { LoginComponent } from './login/login.component';
 import { PackagesComponent } from './packages/packages.component';
+import { PaymentpageComponent } from './paymentpage/paymentpage.component';
 import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'login',component:LoginComponent},
   {path: 'signup',component:SignupComponent},
   {path: 'packages',component:PackagesComponent},
+  {path: 'paymentpage',component:PaymentpageComponent}
   
 ];
 

@@ -25,6 +25,7 @@ import { UserRegistrationService } from './user-registration.service';
 import { PackagesComponent } from './packages/packages.component';
 import {MatInputModule} from '@angular/material/input';
 import { MatFormField } from '@angular/material/form-field';
+import { PaymentpageComponent } from './paymentpage/paymentpage.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { MatFormField } from '@angular/material/form-field';
     HotelsComponent,
     LoginComponent,
     SignupComponent,
-    PackagesComponent
+    PackagesComponent,
+    PaymentpageComponent
   ],
   imports: [
     BrowserModule,
