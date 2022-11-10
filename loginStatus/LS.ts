@@ -25,14 +25,17 @@ const updateUI = (ISLOGGEDIN : boolean) => {
 	var signupButton = document.querySelector('#signupBtn') as HTMLLinkElement
 	var logOutButton = document.querySelector('#logoutBtn') as HTMLLinkElement
 	var userLoginMsg = document.querySelector('#userMsg') as HTMLSpanElement
+	var adminLoginBtn = document.querySelector('#adminBtn') as HTMLLinkElement
 
 	if (ISLOGGEDIN) {
+		adminLoginBtn.style.display = "none"
 		loginButton.style.display = "none"
 		signupButton.style.display = "none"
 		logOutButton.style.display = "block"
 		userLoginMsg.style.display = "block"
 	}
 	else {
+		adminLoginBtn.style.display = "block"
 		loginButton.style.display = "block"
 		signupButton.style.display = "block"
 		logOutButton.style.display = "none"

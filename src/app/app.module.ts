@@ -27,6 +27,7 @@ import {MatInputModule} from '@angular/material/input';
 import { MatFormField } from '@angular/material/form-field';
 import { PaymentpageComponent } from './paymentpage/paymentpage.component';
 import { AdminComponent } from './admin/admin.component';
+import { AdminhomeComponent } from './adminhome/adminhome.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { AdminComponent } from './admin/admin.component';
     SignupComponent,
     PackagesComponent,
     PaymentpageComponent,
-    AdminComponent
+    AdminComponent,
+    AdminhomeComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +60,8 @@ import { AdminComponent } from './admin/admin.component';
     MatMenuModule,
     FormsModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    
   ],
   providers: [UserRegistrationService],
   bootstrap: [AppComponent]
