@@ -1,1 +1,66 @@
-<p>adminhome works!</p>
+<div class="container-fluid">
+    <h2 class="text-light primary py-3">Admin Panel</h2>
+    <div class="d-flex">
+        <button mat-raised-button color="primary" (click)="add()"data-bs-toggle="modal" data-bs-target="#exampleModal">Add Package</button>&nbsp;
+    </div>
+</div>
+
+
+<table id="table">
+    <thead>
+        <tr>
+            <th scope="col">Package Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Cost</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <button  mat-raised-button color="primary" (click)="update()" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>&nbsp;
+
+            <button mat-raised-button color="warn">Delete</button>
+        </td>
+    </tbody>
+</table>
+
+
+ 
+
+<!-- Modal -->
+<div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div style="background-color:blue ;" class="modal-header">
+        <h1 style="color:aliceblue ;font-size: 26px;margin-left: 62px;font-weight: 620;" class="modal-title fs-5" id="exampleModalLabel">Package Management</h1>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formValue">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Package ID</label>
+            <input type="number" formControlName="id" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <br>
+            <label for="exampleInputEmail1" class="form-label">Package Name</label>
+            <input type="name" formControlName="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <br>
+            <label for="exampleInputEmail1" class="form-label">Package Cost</label>
+            <input type="number" formControlName="cost" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <br>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button *ngIf="showadd" type="button" class="btn btn-success">Add</button>
+        <button *ngIf="showupdate" type="button" class="btn btn-success">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+  

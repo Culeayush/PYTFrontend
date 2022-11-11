@@ -27,6 +27,11 @@
 }
 
 .card-title{
-  padding-top: 10 px;
+  display: flex;
+  justify-content:start;
+  align-items:center;
+  /* padding-top: 10 px; */
   border-radius: 6px;
+  background-color: rgba(218, 210, 210, .3);
+  /* background-image: linear-gradient( pink,rgb(114, 36, 49)); */
 }

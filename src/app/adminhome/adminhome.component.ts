@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-adminhome',
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminhomeComponent implements OnInit {
 
-  constructor() { }
+  showadd!:boolean
+  showupdate!:boolean
+
+  formValue!: FormGroup
+  constructor(private formbuilder:FormBuilder) { }
 
   ngOnInit(): void {
+    this.formValue = this.formbuilder.group({
+      id:[],
+      name:[],
+      cost:[]
+    })
   }
 
+  add(){
+    this.showadd = true
+    this.showupdate = false
+  }
+
+  update(){
+    this.showadd = false
+    this.showupdate = true
+  }
 }

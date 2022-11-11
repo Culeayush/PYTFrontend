@@ -28,6 +28,7 @@ import { MatFormField } from '@angular/material/form-field';
 import { PaymentpageComponent } from './paymentpage/paymentpage.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminhomeComponent } from './adminhome/adminhome.component';
+import { PopupComponent } from './popup/popup.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { AdminhomeComponent } from './adminhome/adminhome.component';
     PackagesComponent,
     PaymentpageComponent,
     AdminComponent,
-    AdminhomeComponent
+    AdminhomeComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,
