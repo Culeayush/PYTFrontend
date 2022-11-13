@@ -16,7 +16,7 @@ export class PaymentpageComponent implements OnInit {
   book()
   {
     alert('BOOKING DONE')
-    this.router.navigate(['home'])
+    this.router.navigate(['bookings'])
   }
 
 }

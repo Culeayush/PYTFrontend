@@ -29,6 +29,7 @@ import { PaymentpageComponent } from './paymentpage/paymentpage.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminhomeComponent } from './adminhome/adminhome.component';
 import { PopupComponent } from './popup/popup.component';
+import { BookingsComponent } from './bookings/bookings.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { PopupComponent } from './popup/popup.component';
     PaymentpageComponent,
     AdminComponent,
     AdminhomeComponent,
-    PopupComponent
+    PopupComponent,
+    BookingsComponent
   ],
   imports: [
     BrowserModule,
