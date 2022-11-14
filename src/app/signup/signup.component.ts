@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { getLoginStatus, setUserName, setLoginStatus } from 'loginStatus/LS';
 import { User } from '../login/user';
@@ -10,22 +11,27 @@ import { User } from '../login/user';
 	templateUrl: './signup.component.html',
 	styleUrls: ['./signup.component.css']
 })
+
 export class SignupComponent implements OnInit {
 
 	user!: User;
 	post: any;
 	constructor(private http: HttpClient, private route: ActivatedRoute,
-		private router: Router) { }
+		private router: Router,private _snackBar: MatSnackBar) { }
 
 	ngOnInit(): void {
 	}
+
+	openSnackBar(message: string) {
+		this._snackBar.open(message,"Dismiss",);
+	  }
 
 	addUser() {
 		var email = document.querySelector('#usermail') as HTMLInputElement
 		var password = document.querySelector('#password') as HTMLInputElement
 
 		const body: User = {
-			userID: 1015,
+			userID: 1010,
 			userName: email.value,
 			admin: false,
 			userPassword: password.value
@@ -44,7 +50,7 @@ export class SignupComponent implements OnInit {
 		var confirmPassword = document.querySelector('#confirmPassword') as HTMLInputElement
 
 		if (password.value != confirmPassword.value) {
-			alert("Passwords dont match!!")
+			this.openSnackBar('PASSWORDS DONT MATCH')
 		}
 		else {
 			this.addUser()

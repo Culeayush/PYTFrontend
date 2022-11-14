@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
 import { setLoginStatus } from 'loginStatus/LS';
 import { User } from './user';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
 	selector: 'app-admin',
@@ -15,11 +16,14 @@ export class AdminComponent implements OnInit {
 	user!: User;
 
 	constructor(private http:HttpClient, private route: ActivatedRoute,
-		private router: Router) { }
+		private router: Router,private _snackBar: MatSnackBar) { }
 
 	ngOnInit(): void {
 	}
 
+	openSnackBar(message: string) {
+		this._snackBar.open(message,"Dismiss",);
+	  }
 	getPosts() {
 		var email = document.querySelector('#usermail') as HTMLInputElement
 		var password = document.querySelector('#password') as HTMLInputElement
@@ -44,7 +48,7 @@ export class AdminComponent implements OnInit {
 					console.log(password.value)
 					console.log(this.user.userPassword)
 					if(password.value === this.user.userPassword){
-						alert('LOGGED IN') 
+						this.openSnackBar('LOGGED IN')
 						const sp = document.querySelector('#userMsg') as HTMLSpanElement
 						sp.textContent = 'Hi, '+this.user.userName
 						setLoginStatus(true)
@@ -52,7 +56,7 @@ export class AdminComponent implements OnInit {
 					}
 
 					else{
-						alert('INCORRECT PASSWORD')
+						this.openSnackBar('INCORRECT PASSWORD')
 					}
 					console.log(true);
 				}
