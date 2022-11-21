@@ -29,6 +29,8 @@ import { PaymentpageComponent } from './paymentpage/paymentpage.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminhomeComponent } from './adminhome/adminhome.component';
 import { PopupComponent } from './popup/popup.component';
+import { BookingsComponent } from './bookings/bookings.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -44,7 +46,8 @@ import { PopupComponent } from './popup/popup.component';
     PaymentpageComponent,
     AdminComponent,
     AdminhomeComponent,
-    PopupComponent
+    PopupComponent,
+    BookingsComponent
   ],
   imports: [
     BrowserModule,
@@ -63,7 +66,7 @@ import { PopupComponent } from './popup/popup.component';
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
-    
+    MatSnackBarModule
   ],
   providers: [UserRegistrationService],
   bootstrap: [AppComponent]

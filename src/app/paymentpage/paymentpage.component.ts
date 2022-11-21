@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,15 +9,20 @@ import { Router } from '@angular/router';
 })
 export class PaymentpageComponent implements OnInit {
 
-  constructor(private router:Router) {}
+  constructor(private router:Router,private _snackBar: MatSnackBar) {}
 
   ngOnInit(): void {
   }
 
+  openSnackBar(message: string) {
+	this._snackBar.open(message,"Dismiss",);
+  }
+
   book()
   {
-    alert('BOOKING DONE')
-    this.router.navigate(['home'])
+    this.openSnackBar('BOOKING DONE')
+    this.router.navigate(['bookings'])
+	
   }
 
 }
