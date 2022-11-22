@@ -14,7 +14,7 @@
 			<div style="height:'240px';  padding:'10px'; padding-left:'20px'">
 				<p class="title">{{card['packageName']}}</p>
 				<p class="cost">{{card['packageCost']}}</p>
-				<button mat-raised-button routerLink="/paymentpage">Book Now</button>
+				<button mat-raised-button (click)="book()">Book Now</button>
 			</div>
 		</section>
 	</div>

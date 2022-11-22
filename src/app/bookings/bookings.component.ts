@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Package } from '../packages/Package';
 import { Bookings } from './Bookings';
 
 @Component({
@@ -21,27 +22,29 @@ export class BookingsComponent implements OnInit {
 	post: any
 
 	booking!: Bookings;
+	package!: Package;
 	posts: any;
 	data = []
 
 	constructor(private http: HttpClient, private route: ActivatedRoute,
 		private router: Router) { }
 
-	ngOnInit(): void {
-		const body: Bookings = {
-			bookingId: '',
-			pkg: 'string',
+		ngOnInit(): void {
+			const body: Package = {
+				packageID: '',
+				packageName: 'string',
+				packageCost: ''
+			}
+	
+			this.package = new Package()
+	
+			this.posts = this.http.get<any>('http://localhost:8093/bookings/get')
+				.subscribe(async d => {
+					this.data = d;
+					console.log(this.data)
+	
+				})
 		}
-
-		this.booking = new Bookings()
-
-		this.posts = this.http.get<any>(`http://localhost:8093/user/getBooking/${1010}`)
-			.subscribe(async d => {
-				this.data = d;
-				console.log(this.data)
-
-			})
-	}
 
 	add() {
 		this.showadd = true
