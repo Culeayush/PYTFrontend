@@ -1,6 +1,7 @@
 export class Bookings{
-	bookingId: any;
-	pkg: any;
+	packageID: any;
+	packageName: any;
+	packageCost: any
 
 	constructor(){}
 }
