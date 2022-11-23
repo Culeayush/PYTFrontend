@@ -11,10 +11,11 @@
 
 		<section class="card-container">
 			<img src="https://images.unsplash.com/photo-1503917988258-f87a78e3c995?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt='none' class="image" />
-			<div style="height:'240px';  padding:'10px'; padding-left:'20px'">
-				<p class="title">{{card['packageName']}}</p>
-				<p class="cost">{{card['packageCost']}}</p>
-				<button mat-raised-button (click)="book()">Book Now</button>
+			<div [id]="card['packageID']" style="height:'240px';  padding:'10px'; padding-left:'20px'">
+				<p class="id" id="packageId">{{card['packageID']}}</p>
+				<p class="title" id="packageNAME">{{card['packageName']}}</p>
+				<p class="cost" id="packageCOST">{{card['packageCost']}}</p>
+				<button mat-raised-button (click)="book(card['packageID'])">Book Now</button>
 			</div>
 		</section>
 	</div>

@@ -7,8 +7,8 @@
 			<th scope="col">Action</th>
 		</tr>
 	</thead>
-	<tbody class="tbody" *ngFor="let x of items">
-		<td [id]="x['packageID']">{{x['packageID']}}</td>
+	<tbody class="tbody" *ngFor="let x of data" [id]="x['packageID']">
+		<td>{{x['packageID']}}</td>
 		<td>{{x['packageName']}}</td>
 		<td>{{x['packageCost']}}</td>
 		<td>
